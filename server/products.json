@@ -11803,6 +11803,66 @@
       ],
       "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/women's-wrist-watch/thumbnail.webp",
       "categoryId": 24
+    },
+    {
+      "title": "Kalleas",
+      "brand": "klätterträd",
+      "description": "klättraren",
+      "thumbnail": "https://www.dealproffsen.se/131816-medium_default/klostrad-143-cm-med-klospelare-sisal-beige.jpg",
+      "price": 14,
+      "stock": 1,
+      "categoryId": 12,
+      "meta": {
+        "createdAt": "2026-02-23T21:48:14.211Z",
+        "updatedAt": "2026-02-23T21:48:14.211Z"
+      },
+      "id": 195,
+      "sku": "MOT-KLÄ-KAL-195"
+    },
+    {
+      "title": "Kalles",
+      "brand": "Klätterträd",
+      "description": "dkjfsldkfjsjlsk",
+      "thumbnail": "https://www.dealproffsen.se/131816-medium_default/klostrad-143-cm-med-klospelare-sisal-beige.jpg",
+      "price": 2,
+      "categoryId": 3,
+      "stock": 3,
+      "meta": {
+        "createdAt": "2026-02-23T21:53:11.287Z",
+        "updatedAt": "2026-02-23T21:53:11.287Z"
+      },
+      "id": 196,
+      "sku": "FUR-KLÄ-KAL-196"
+    },
+    {
+      "title": "Majas",
+      "brand": "Gräddnos",
+      "description": "DKFJSLDFJSLJL",
+      "thumbnail": "https://www.dealproffsen.se/131816-medium_default/klostrad-143-cm-med-klospelare-sisal-beige.jpg",
+      "price": 3,
+      "categoryId": 1,
+      "stock": 1,
+      "meta": {
+        "createdAt": "2026-02-23T21:54:20.403Z",
+        "updatedAt": "2026-02-23T21:54:20.403Z"
+      },
+      "id": 197,
+      "sku": "BEA-GRÄ-MAJ-197"
+    },
+    {
+      "title": "Tures",
+      "brand": "Tur",
+      "description": "jhdfsdkfhaskfdh",
+      "thumbnail": "https://www.dealproffsen.se/131816-medium_default/klostrad-143-cm-med-klospelare-sisal-beige.jpg",
+      "price": 4,
+      "categoryId": 1,
+      "stock": 3,
+      "meta": {
+        "createdAt": "2026-02-23T21:54:37.730Z",
+        "updatedAt": "2026-02-23T21:54:37.730Z"
+      },
+      "id": 198,
+      "sku": "BEA-TUR-TUR-198"
     }
   ],
   "categories": [

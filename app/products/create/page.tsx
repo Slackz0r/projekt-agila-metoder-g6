@@ -1,15 +1,18 @@
 import Form from "next/form";
 import { addProduct } from "@/components/addProduct";
+import { Category } from "@/app/types";
 
 
 /*
 All styling kommer ifrån chatgpt efter prompten "Modern css styling i tailwind för input, button och textarea"
-Ruttnade på att tailwind for koden att sträckas ut och bli oöverskådelig så la dem i respektive konstanter istället.
+Ruttnade på att tailwind får koden att sträckas ut och bli oöverskådelig så la dem i respektive konstanter istället.
 */
 
 const styleInput = "w-full rounded-xl border border-gray-200 bg-white/80 backdrop-blur px-4 py-2.5 text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-blue-500 hover:shadow-md";
 const styleTextArea = "w-full rounded-xl border border-gray-200 bg-white/80 px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition";
 const styleButton = "inline-flex items-center justify-center rounded-xl bg-purple-700 px-5 py-2.5 mx-8 text-sm font-medium text-white shadow-sm transition-all duration-200 ease-in-out hover:bg-purple-800 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500/40 focus:ring-offset-2 active:scale-[0.98] disabled:bg-purple-300 disabled:cursor-not-allowed disabled:shadow-none";
+
+const categories: Category[] = await fetch(`http://localhost:4000/categories`).then((res) => res.json());
 
 
 export default function createProductPage() {
@@ -74,13 +77,15 @@ export default function createProductPage() {
                 <label className="font-semibold" htmlFor="categoryId">
                     Kategori ID
                 </label>
-                <input
+                <select
                     className={styleInput}
-                    type="number"
                     id="categoryId"
                     name="categoryId"
                     required
-                />
+                >
+                    {categories.map((cat) => <option key={`categoryOption-${cat.id}`} value={cat.id}>{cat.name}</option>)}
+                </select>
+
                 <label className="font-semibold" htmlFor="description">
                     Beskrivning
                 </label>

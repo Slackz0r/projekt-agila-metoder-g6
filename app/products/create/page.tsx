@@ -50,7 +50,7 @@ export default function createProductPage() {
                             <input
                                 className={styleInput}
                                 type="text"
-                                id="brandprice"
+                                id="brand"
                                 name="brand"
                                 required
                             />
@@ -66,31 +66,6 @@ export default function createProductPage() {
                                 {categories.map((cat) => <option key={`categoryOption-${cat.id}`} value={cat.id}>{cat.name}</option>)}
                             </select>
                         </div>
-                        <div className="col-span-2 grid grid-cols-[70px_1fr_100px_1fr] gap-4 items-baseline">
-                            <label className="font-semibold" htmlFor="price">
-                                Pris
-                            </label>
-                            <input
-                                className={styleInput}
-                                type="number"
-                                id="price"
-                                name="price"
-                                min="1.0"
-                                step="0.01"
-                                required
-                            />
-                            <label className="font-semibold" htmlFor="stock">
-                                Lagerantal
-                            </label>
-                            <input
-                                className={styleInput}
-                                type="number"
-                                id="stock"
-                                name="stock"
-                                min="0"
-                                step="1"
-                            />
-                        </div>
                         <div className="col-span-2">
                             <label className="font-semibold" htmlFor="thumbnail">
                                 Miniatyrbild (URL)
@@ -103,20 +78,55 @@ export default function createProductPage() {
                                 required
                             />
                         </div>
-                        <div className="col-span-2">
-                            <label className="font-semibold" htmlFor="description">
-                                Beskrivning
-                            </label>
-                            <textarea
-                                className={styleTextArea}
-                                id="description"
-                                name="description"
-                                rows={6}
-                                minLength={5}
-                                maxLength={350}
-                                required
-                            />
+
+                        <div className="grid grid-cols-[1fr_1fr] gap-4">
+
+                            <div>
+                                <label className="font-semibold" htmlFor="description">
+                                    Beskrivning
+                                </label>
+                                <textarea
+                                    className={styleTextArea}
+                                    id="description"
+                                    name="description"
+                                    rows={6}
+                                    minLength={5}
+                                    maxLength={350}
+                                    required
+                                />
+                            </div>
+
+                            <div className="flex flex-col gap-4">
+                                <div>
+                                    <label className="font-semibold" htmlFor="price">
+                                        Pris
+                                    </label>
+                                    <input
+                                        className={styleInput}
+                                        type="number"
+                                        id="price"
+                                        name="price"
+                                        min="1.0"
+                                        step="0.01"
+                                        required
+                                    />
+                                </div><div>
+                                    <label className="font-semibold" htmlFor="stock">
+                                        Lagerantal
+                                    </label>
+                                    <input
+                                        className={styleInput}
+                                        type="number"
+                                        id="stock"
+                                        name="stock"
+                                        min="0"
+                                        step="1"
+                                    />
+                                </div>
+                            </div>
+
                         </div>
+
                         <span className="col-span-2 flex justify-center">
                             <button
                                 type="submit"
@@ -142,7 +152,7 @@ export default function createProductPage() {
                         </span>
                     </div >
                 </Form >
-            </div>
+            </div >
         </div >
     </main >
 

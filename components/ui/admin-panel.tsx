@@ -28,7 +28,7 @@ type ActiveUser = {
 };
 
 const activeUser: ActiveUser = {
-  image: "https://www.loremfaces.net/96/id/1.jpg",
+  image: "https://www.loremfaces.net/96/id/2.jpg",
   name: "Carl Bildt",
   email: "c_bildt_3000@yahoo.com",
 };
@@ -38,11 +38,14 @@ export default function AdminPanel() {
   const pathname = usePathname();
 
   return (
-    <aside className="px-4 w-80 h-screen sticky top-0">
-      <span className="text-2xl font-bold">Webbutiken</span>
-      <h3 className="text-sm text-neutral-500">Admin Panel</h3>
-      <nav className="flex mx-auto flex-col h-full py-2 justify-between">
-        <ul>
+    <aside className="grid-rows-8 grid py-4 w-100 h-screen sticky top-0 my-2 border-neutral-300 border">
+      <section className="border-b py-2 px-4 border-neutral-300 flex flex-col justify-center">
+        <span className="text-2xl font-bold">Webbutiken</span>
+        <h3 className="text-sm text-neutral-500">Admin Panel</h3>
+      </section>
+
+      <nav className="row-span-6 mx-auto w-full px-4 h-full py-4 justify-between">
+        <ul className="gap-1 flex flex-col">
           {menuItems.map((item) => {
             const isActive = pathname === item.href;
 
@@ -63,21 +66,20 @@ export default function AdminPanel() {
             );
           })}
         </ul>
-
-        <section className="flex text-ellipsis overflow-hidden whitespace-nowrap border-t  items-center place-self-end-safe my-4 py-4">
-          <Image
-            className="rounded-4xl py-2"
-            src={activeUser.image}
-            width={100}
-            height={100}
-            alt="profile picture"
-          />
-          <div className="px-2">
-            <span className="font-medium ">{activeUser.name}</span> <br />
-            <span className="text-sm text-neutral-500">{activeUser.email}</span>
-          </div>
-        </section>
       </nav>
+      <section className="px-4 flex text-ellipsis overflow-hidden whitespace-nowrap items-center place-self-end-safe py-4 border-t border-neutral-300">
+        <Image
+          className="rounded-full object-cover object-center"
+          src={activeUser.image}
+          width={100}
+          height={100}
+          alt="profile picture"
+        />
+        <div className="px-2">
+          <span className="font-medium ">{activeUser.name}</span> <br />
+          <span className="text-sm text-neutral-500">{activeUser.email}</span>
+        </div>
+      </section>
     </aside>
   );
 }

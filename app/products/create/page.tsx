@@ -28,84 +28,95 @@ export default function createProductPage() {
 
             <div className="bg-white rounded-xl shadow-sm p-8">
                 <Form action={addProduct}>
-                    <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-center max-w-4xl">
-                        <label className="font-semibold" htmlFor="title">
-                            Titel
-                        </label>
-                        <input
-                            className={styleInput}
-                            type="text"
-                            id="title"
-                            name="title"
-                            minLength={3}
-                            maxLength={20}
-                            required
-                        />
-                        <label className="font-semibold" htmlFor="brand">
-                            Märke
-                        </label>
-                        <input
-                            className={styleInput}
-                            type="text"
-                            id="brandprice"
-                            name="brand"
-                            required
-                        />
-                        <label className="font-semibold" htmlFor="categoryId">
-                            Kategori ID
-                        </label>
-                        <select
-                            className={styleInput}
-                            id="categoryId"
-                            name="categoryId"
-                            required
-                        >
-                            {categories.map((cat) => <option key={`categoryOption-${cat.id}`} value={cat.id}>{cat.name}</option>)}
-                        </select>
-                        <label className="font-semibold" htmlFor="price">
-                            Pris
-                        </label>
-                        <input
-                            className={styleInput}
-                            type="number"
-                            id="price"
-                            name="price"
-                            min="1.0"
-                            step="0.01"
-                            required
-                        />
-                        <label className="font-semibold" htmlFor="stock">
-                            Lagerantal
-                        </label>
-                        <input
-                            className={styleInput}
-                            type="number"
-                            id="stock"
-                            name="stock"
-                            min="0"
-                            step="1"
-                        />
-                        <label className="font-semibold" htmlFor="thumbnail">
-                            Miniatyrbild
-                        </label>
-                        <input
-                            className={styleInput}
-                            type="url"
-                            id="thumbnail"
-                            name="thumbnail"
-                            required
-                        />
-                        <label className="font-semibold" htmlFor="description">
-                            Beskrivning
-                        </label>
-                        <textarea
-                            className={styleTextArea}
-                            id="description"
-                            name="description"
-                            minLength={5}
-                            maxLength={400}
-                            required
-                        />
+                    <div className="grid grid-cols-[auto_1fr] gap-y-4 items-center max-w-4xl">
+                        <div className="col-span-2">
+                            <label className="font-semibold" htmlFor="title">
+                                Titel
+                            </label>
+                            <input
+                                className={styleInput}
+                                type="text"
+                                id="title"
+                                name="title"
+                                minLength={3}
+                                maxLength={20}
+                                required
+                            />
+                        </div>
+                        <div className="col-span-2 grid grid-cols-[70px_1fr_100px_1fr] gap-4 items-baseline">
+                            <label className="font-semibold" htmlFor="brand">
+                                Märke
+                            </label>
+                            <input
+                                className={styleInput}
+                                type="text"
+                                id="brandprice"
+                                name="brand"
+                                required
+                            />
+                            <label className="font-semibold" htmlFor="categoryId">
+                                Kategori ID
+                            </label>
+                            <select
+                                className={styleInput}
+                                id="categoryId"
+                                name="categoryId"
+                                required
+                            >
+                                {categories.map((cat) => <option key={`categoryOption-${cat.id}`} value={cat.id}>{cat.name}</option>)}
+                            </select>
+                        </div>
+                        <div className="col-span-2 grid grid-cols-[70px_1fr_100px_1fr] gap-4 items-baseline">
+                            <label className="font-semibold" htmlFor="price">
+                                Pris
+                            </label>
+                            <input
+                                className={styleInput}
+                                type="number"
+                                id="price"
+                                name="price"
+                                min="1.0"
+                                step="0.01"
+                                required
+                            />
+                            <label className="font-semibold" htmlFor="stock">
+                                Lagerantal
+                            </label>
+                            <input
+                                className={styleInput}
+                                type="number"
+                                id="stock"
+                                name="stock"
+                                min="0"
+                                step="1"
+                            />
+                        </div>
+                        <div className="col-span-2">
+                            <label className="font-semibold" htmlFor="thumbnail">
+                                Miniatyrbild (URL)
+                            </label>
+                            <input
+                                className={styleInput}
+                                type="url"
+                                id="thumbnail"
+                                name="thumbnail"
+                                required
+                            />
+                        </div>
+                        <div className="col-span-2">
+                            <label className="font-semibold" htmlFor="description">
+                                Beskrivning
+                            </label>
+                            <textarea
+                                className={styleTextArea}
+                                id="description"
+                                name="description"
+                                rows={6}
+                                minLength={5}
+                                maxLength={350}
+                                required
+                            />
+                        </div>
                         <span className="col-span-2 flex justify-center">
                             <button
                                 type="submit"
@@ -132,7 +143,7 @@ export default function createProductPage() {
                     </div >
                 </Form >
             </div>
-        </div>
-    </main>
+        </div >
+    </main >
 
 }

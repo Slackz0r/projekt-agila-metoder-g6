@@ -1,3 +1,8 @@
+import type { StatusProps } from "@/models/Status";
+import type { Product } from "@/app/types";
+import StatusCard from "./status-card";
+
+// Fetch function
 const getStats = async function () {
   const response = await fetch("http://localhost:4000/products");
 
@@ -8,13 +13,12 @@ const getStats = async function () {
 export default async function ProductStats() {
   const data = await getStats();
   const { products, total } = data;
-  console.log(data);
 
   let inStock = 0;
   let lowStock = 0;
   let outOfStock = 0;
 
-  products.forEach((item: any) => {
+  products.forEach((item: Product) => {
     if (item.availabilityStatus === "In Stock") {
       inStock++;
     } else if (item.availabilityStatus === "Low Stock") {
@@ -24,14 +28,36 @@ export default async function ProductStats() {
     }
   });
 
+  const cards: StatusProps[] = [
+    {
+      title: "Total Stock",
+      amount: total,
+      variant: "default",
+    },
+    {
+      title: "In Stock",
+      amount: inStock,
+      variant: "success",
+    },
+    {
+      title: "Low Stock",
+      amount: lowStock,
+      variant: "warning",
+    },
+    {
+      title: "Out of Stock",
+      amount: outOfStock,
+      variant: "danger",
+    },
+  ];
+
   return (
     <>
-      <div>
-        <p>Total = {total}</p>
-        <p>In stock = {inStock}</p>
-        <p>Low stock = {lowStock}</p>
-        <p>Out of Stock = {outOfStock}</p>
-      </div>
+      <section className="flex gap-8 my-8">
+        {cards.map((card) => (
+          <StatusCard key={card.title} {...card} />
+        ))}
+      </section>
     </>
   );
 }

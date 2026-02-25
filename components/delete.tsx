@@ -16,12 +16,12 @@ export default function Delete({ id, onDelete, onClose }: Props) {
       method: "DELETE",
     });
 
-    onDelete(id); // 🔥 tell parent to remove it
+    onDelete(id); 
   }
 
   return (
-    <div className="mt-6 p-4 border rounded bg-red-50">
-      <h2 className="text-lg font-bold mb-4 text-red-600">
+    <div className="mt-6 p-4 border rounded bg-blue-50">
+      <h2 className="text-lg font-bold mb-4 text-blue-600">
         Delete Product
       </h2>
 

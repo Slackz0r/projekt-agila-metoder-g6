@@ -32,6 +32,7 @@ function highlightText(
 }
 
 export default function Search() {
+
   const [products, setProducts] = useState<Product[]>([]);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Fuse.FuseResult<Product>[]>([]);
@@ -40,8 +41,6 @@ export default function Search() {
     async function load() {
       const res = await fetch(API_URL);
       const data = await res.json();
-
-      // Adjust depending on your API shape
       const productArray = Array.isArray(data) ? data : data.products;
 
       setProducts(productArray);
@@ -58,17 +57,17 @@ export default function Search() {
       keys: [
         "title",
         "description",
-        "brand",
-        "sku",
-        "tags",
-        "warrantyInformation",
-        "shippingInformation",
-        "availabilityStatus",
-        "returnPolicy",
-        "meta.barcode",
-        "meta.qrCode",
-        "reviews.comment",
-        "reviews.reviewerName",
+   //     "brand",
+   //     "sku",
+   //     "tags",
+  //      "warrantyInformation",
+  //      "shippingInformation",
+  //      "availabilityStatus",
+  //      "returnPolicy",
+  //      "meta.barcode",
+  //      "meta.qrCode",
+ //       "reviews.comment",
+ //       "reviews.reviewerName",
       ],
     });
   }, [products]);

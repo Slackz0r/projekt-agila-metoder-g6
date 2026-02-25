@@ -4,7 +4,6 @@ import { ProductsResponse } from "@/types/types";
 //Components
 import AdminPanel from "@/components/ui/admin-panel";
 //import ProductGrid from "@/components/ui/product-grid";
-import Products, { ProdLen } from "@/components/GetProd";
 import ProductManagement from "@/components/ui/product-management";
 import ProductStats from "@/components/ui/product-stats";
 import SearchBar from "@/components/ui/search-bar";

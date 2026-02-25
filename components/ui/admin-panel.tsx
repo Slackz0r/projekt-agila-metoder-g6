@@ -38,7 +38,7 @@ export default function AdminPanel() {
   const pathname = usePathname();
 
   return (
-    <aside className="grid-rows-8 grid py-4 w-100 h-screen sticky top-0 my-2 border-neutral-300 border">
+    <aside className="grid-rows-8 grid w-70 h-screen sticky top-0 border-neutral-300 border">
       <section className="border-b py-2 px-4 border-neutral-300 flex flex-col justify-center">
         <span className="text-2xl font-bold">Webbutiken</span>
         <h3 className="text-sm text-neutral-500">Admin Panel</h3>
@@ -67,12 +67,12 @@ export default function AdminPanel() {
           })}
         </ul>
       </nav>
-      <section className="px-4 flex text-ellipsis overflow-hidden whitespace-nowrap items-center place-self-end-safe py-4 border-t border-neutral-300">
+      <section className="px-4 justify-center py-2 flex w-full text-ellipsis overflow-hidden whitespace-nowrap items-center place-self-end-safe border-t border-neutral-300">
         <Image
           className="rounded-full object-cover object-center"
           src={activeUser.image}
-          width={100}
-          height={100}
+          width={50}
+          height={50}
           alt="profile picture"
         />
         <div className="px-2">

@@ -94,7 +94,6 @@ export default function Products({ products }: Props) {
       {(selectedId || deleteId) && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           
-          {/* Dark overlay */}
           <div
             className="absolute inset-0 bg-black/50"
             onClick={() => {
@@ -103,7 +102,6 @@ export default function Products({ products }: Props) {
             }}
           />
 
-          {/* Modal box */}
           <div className="relative bg-white rounded-lg shadow-lg w-full max-w-md p-6 z-10">
             
             {selectedId && (

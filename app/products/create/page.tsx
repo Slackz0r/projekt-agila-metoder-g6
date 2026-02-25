@@ -19,9 +19,9 @@ export default function createProductPage() {
 
             <div className="mx-auto w-max">
                 <h1 className="text-2xl font-semibold text-slate-800">
-                    Lägg till en produkt
+                    Add product
                 </h1>
-                <p className="text-sm text-slate-500">Skriv in följande produktinformation</p>
+                <p className="text-sm text-slate-500">Enter the product information</p>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-8">

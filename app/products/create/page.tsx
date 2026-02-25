@@ -1,4 +1,5 @@
 import Form from "next/form";
+import Link from "next/link";
 import { addProduct } from "@/components/addProduct";
 import { Category } from "@/app/types";
 
@@ -31,7 +32,7 @@ export default function createProductPage() {
                     <div className="grid grid-cols-[auto_1fr] gap-y-4 items-center max-w-4xl">
                         <div className="col-span-2">
                             <label className="font-semibold" htmlFor="title">
-                                Titel
+                                Title
                             </label>
                             <input
                                 className={styleInput}
@@ -45,7 +46,7 @@ export default function createProductPage() {
                         </div>
                         <div className="col-span-2 grid grid-cols-[70px_1fr_100px_1fr] gap-4 items-baseline">
                             <label className="font-semibold" htmlFor="brand">
-                                Märke
+                                Brand
                             </label>
                             <input
                                 className={styleInput}
@@ -55,7 +56,7 @@ export default function createProductPage() {
                                 required
                             />
                             <label className="font-semibold" htmlFor="categoryId">
-                                Kategori ID
+                                Category
                             </label>
                             <select
                                 className={styleInput}
@@ -68,7 +69,7 @@ export default function createProductPage() {
                         </div>
                         <div className="col-span-2">
                             <label className="font-semibold" htmlFor="thumbnail">
-                                Miniatyrbild (URL)
+                                Thumbnail (URL)
                             </label>
                             <input
                                 className={styleInput}
@@ -83,7 +84,7 @@ export default function createProductPage() {
 
                             <div>
                                 <label className="font-semibold" htmlFor="description">
-                                    Beskrivning
+                                    Description
                                 </label>
                                 <textarea
                                     className={styleTextArea}
@@ -99,7 +100,7 @@ export default function createProductPage() {
                             <div className="flex flex-col gap-4">
                                 <div>
                                     <label className="font-semibold" htmlFor="price">
-                                        Pris
+                                        Price
                                     </label>
                                     <input
                                         className={styleInput}
@@ -112,7 +113,7 @@ export default function createProductPage() {
                                     />
                                 </div><div>
                                     <label className="font-semibold" htmlFor="stock">
-                                        Lagerantal
+                                        Stock
                                     </label>
                                     <input
                                         className={styleInput}
@@ -134,7 +135,7 @@ export default function createProductPage() {
                                 name="submit"
                                 value="again"
                                 className={styleButton}
-                            >Spara och igen
+                            >Save and add
                             </button>
                             <button
                                 type="submit"
@@ -142,15 +143,16 @@ export default function createProductPage() {
                                 name="submit"
                                 value="back"
                                 className={styleButton}
-                            >Spara och tillbaka
+                            >Save and back
                             </button>
-                            <button
-                                type="reset"
+                            <Link
+                                href="/"
                                 className={styleButton}
-                            >Ångra
-                            </button>
+                            >Back
+                            </Link>
                         </span>
                     </div >
+
                 </Form >
             </div >
         </div >

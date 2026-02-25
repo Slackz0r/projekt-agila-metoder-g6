@@ -1,138 +1,131 @@
-import type { ProductsResponse } from "../types/types.ts";
-import { Headphones } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Router } from 'lucide-react';
-import { Flashlight } from 'lucide-react';
-import { Piano } from 'lucide-react';
-import { Hammer } from 'lucide-react';
-import { SquarePen } from 'lucide-react';
-import { Trash } from 'lucide-react';
-import type { Product } from "../types/types.ts"
-//import { addProduct } from "./addProduct.js"
+"use client";
 
-const API_URL = "http://localhost:4000";
-const defaultLimit = "50";
+import Delete from "./delete";
+import { useState } from "react";
+import type { Product } from "../types/types";
+import { SquarePen, Trash } from "lucide-react";
+import Edit from "./edit";
 
-const icons=[<Headphones />,<Monitor />,<Router />,<Flashlight />,<Piano />,<Hammer />]
-const status=["In stock","Low stock","Out of stock"]
-const stock=["In stock","Low stock","Out of stock"]
+type Props = {
+  products: Product[];
+};
 
-export default async function Products() {
-  const { products, total, page, pages, limit }: ProductsResponse = await fetch(
-    `${API_URL}/products/?_limit=${defaultLimit}&_sort=id&_order=desc&_expand=category`,
-  ).then((res) => res.json());
+export default function Products({ products }: Props) {
+  const [productList, setProductList] = useState<Product[]>(products);
+  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [deleteId, setDeleteId] = useState<number | null>(null);
 
-console.log(products);
+  function handleUpdate(updatedProduct: Product) {
+    setProductList(prev =>
+      prev.map(p => (p.id === updatedProduct.id ? updatedProduct : p))
+    );
+    setSelectedId(null);
+  }
 
-return (
-  <div className="bg-white rounded-lg shadow border border-gray-200 overflow-hidden">
-    
-    <div className="grid grid-cols-7 bg-gray-50 border-b border-gray-200 text-sm font-semibold text-gray-600 uppercase tracking-wide">
-      <div className="p-3"></div>
-      <div className="p-3">Product</div>
-      <div className="p-3">Category</div>
-      <div className="p-3">Price</div>
-      <div className="p-3">Stock</div>
-      <div className="p-3">Status</div>
-      <div className="p-3 text-right">Action</div>
-    </div>
+  function handleDelete(id: number) {
+    setProductList(prev => prev.filter(p => p.id !== id));
+    setDeleteId(null);
+  }
 
-    {products.map((product, index) => (
-      <div
-        key={product.id}
-        className={`grid grid-cols-7 items-center border-b border-gray-100 
-        ${index % 2 === 0 ? "bg-white" : "bg-gray-50"} 
-        hover:bg-blue-50 transition`}>
-        <div className="p-3">{icons[Math.floor(Math.random()*6)]}</div>
-        <div className="p-3 font-medium text-gray-800">
-          {product.title}
-        </div>
-        <div className="p-3 text-gray-600">
-          {product.category?.name}
-        </div>
-        <div className="p-3">{product.price}</div>
-        <div className="p-3">{Math.floor(Math.random()*100)}</div>
-        <div className="p-3">
-          <span className="px-2 py-1 text-xs rounded-full bg-blue-100 text-green-700">
-            {status[Math.floor(Math.random()*3)]} 
-          </span>
-        </div>
-        <div className="p-3 text-right">
-          <button className="text-sm text-blue-600 hover:underline">
-		<div className="flex items-center gap-2">
-  			<SquarePen size={16} className="text-blue-600 cursor-pointer" />
-  			<Trash size={16} className="text-red-600 cursor-pointer" />
-		</div>
-          </button>
-        </div>
+  return (
+    <>
+      <div className="bg-white shadow rounded-lg overflow-hidden">
+        <table className="min-w-full text-sm text-left">
+          <thead className="bg-gray-100 text-gray-700 uppercase text-xs">
+            <tr>
+              <th className="px-4 py-3">Title</th>
+              <th className="px-4 py-3">Category</th>
+              <th className="px-4 py-3">Brand</th>
+              <th className="px-4 py-3">Price</th>
+              <th className="px-4 py-3">Stock</th>
+              <th className="px-4 py-3 text-right">Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {productList.map(product => (
+              <tr
+                key={product.id}
+                className="border-t hover:bg-gray-50"
+              >
+                <td className="px-4 py-3 font-medium">
+                  {product.title}
+                </td>
+
+                <td className="px-4 py-3">
+                  {typeof product.category === "object"
+                    ? product.category?.name
+                    : product.category}
+                </td>
+
+                <td className="px-4 py-3">
+                  {product.brand}
+                </td>
+
+                <td className="px-4 py-3">
+                  ${product.price}
+                </td>
+
+                <td className="px-4 py-3">
+                  {product.stock}
+                </td>
+
+                <td className="px-4 py-3">
+                  <div className="flex justify-end gap-3">
+                    <SquarePen
+                      size={16}
+                      className="cursor-pointer text-blue-600 hover:text-blue-800"
+                      onClick={() => setSelectedId(product.id)}
+                    />
+
+                    <Trash
+                      size={16}
+                      className="cursor-pointer text-red-600 hover:text-red-800"
+                      onClick={() => setDeleteId(product.id)}
+                    />
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    ))}
-  </div>
-);
 
-}
+      {(selectedId || deleteId) && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          
+          {/* Dark overlay */}
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => {
+              setSelectedId(null);
+              setDeleteId(null);
+            }}
+          />
 
-export function ProdLen(products: any[]) {
-  return products.length;
-}
+          {/* Modal box */}
+          <div className="relative bg-white rounded-lg shadow-lg w-full max-w-md p-6 z-10">
+            
+            {selectedId && (
+              <Edit
+                id={selectedId}
+                onSave={handleUpdate}
+                onClose={() => setSelectedId(null)}
+              />
+            )}
 
-export function remove(products: Product[],id: number): Product | null {
-  const index = products.findIndex(p => p.id === id);
+            {deleteId && (
+              <Delete
+                id={deleteId}
+                onDelete={handleDelete}
+                onClose={() => setDeleteId(null)}
+              />
+            )}
 
-  if (index === -1) return null;
+          </div>
+        </div>
+      )}
 
-  const deletedProduct = products.splice(index, 1)[0];
-
-  return deletedProduct;
-}
-
-export function search(products: Product[],query: string): Product[] {
-
-  const lowerQuery = query.toLowerCase();
-
-  return products.filter(p =>
-    p.title.toLowerCase().includes(lowerQuery)
+    </>
   );
 }
-
-export function edit(products: Product[],id: number): Product {
-	
-	const index = products.findIndex(p => p.id === id);
-
-	return product
-
-}
-
-export function getById(products: Product[],id: number): Product | null {
-  return products.find(p => p.id === id) || null;
-}
-
-export function updateProduct(products: Product[],id: number,updates: Partial<Product>): Product | null {
-
-  const index = products.findIndex(p => p.id === id);
-  if (index === -1) return null;
-
-  const updatedProduct = {
-    ...products[index],
-    ...updates,
-    meta: {
-      ...products[index].meta,
-      updatedAt: new Date().toISOString()
-    }
-  };
-
-  products[index] = updatedProduct;
-
-  return updatedProduct;
-}
-
-// export default function createPage() {
-
-//	return {
-//		<main> 
-//		   <h1>new product</h1>
-//	   	      <Form action={addProduct}>
-//		        <input className="border" type="text" name="query"
-//	}
-
-

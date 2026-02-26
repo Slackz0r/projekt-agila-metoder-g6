@@ -57,17 +57,17 @@ export default function Search() {
       keys: [
         "title",
         "description",
-   //     "brand",
-   //     "sku",
-   //     "tags",
-  //      "warrantyInformation",
-  //      "shippingInformation",
-  //      "availabilityStatus",
-  //      "returnPolicy",
-  //      "meta.barcode",
-  //      "meta.qrCode",
- //       "reviews.comment",
- //       "reviews.reviewerName",
+        //     "brand",
+        //     "sku",
+        //     "tags",
+        //      "warrantyInformation",
+        //      "shippingInformation",
+        //      "availabilityStatus",
+        //      "returnPolicy",
+        //      "meta.barcode",
+        //      "meta.qrCode",
+        //       "reviews.comment",
+        //       "reviews.reviewerName",
       ],
     });
   }, [products]);
@@ -82,17 +82,17 @@ export default function Search() {
   }, [query, fuse]);
 
   return (
-    <div className="p-6 max-w-xl mx-auto">
+    <div className="p-3 max-w-[55%] mx-auto">
       <input
         type="text"
         placeholder="Search anything..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="border px-4 py-2 rounded w-full mb-4"
+        className="border px-4 py-2 rounded mb-4 w-full"
       />
 
       {query.trim() === "" ? (
-        <p className="text-gray-400">Start typing to search...</p>
+        <p className="text-gray-400 hidden">Start typing to search...</p>
       ) : results.length === 0 ? (
         <p>No results found.</p>
       ) : (

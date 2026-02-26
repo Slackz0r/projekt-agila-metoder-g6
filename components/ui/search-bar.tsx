@@ -33,20 +33,12 @@ export default function SearchBar({ onFilterChange }: Props) {
     });
   };
 
-  return (
-    <div className="flex flex-col md:flex-row gap-4 p-4 shadow-sm rounded-lg mb-6">
-      {/* search bar */}
-      <input
-        type="text"
-        placeholder="Search products..."
-        className="border border-neutral-300 rounded-lg px-3 py-2 w-full"
-        value={search}
-        onChange={(e) => handleChange(e.target.value)}
-      />
+  return (<>
 
+    <div className="p-3 max-w-[55%] mx-auto">
       {/* category filter drop down */}
       <select
-        className="border border-neutral-300 rounded-lg px-3 py-2 w-full md:w-1/3"
+        className="border py-2 rounded mb-4 w-1/2"
         value={category}
         onChange={(e) => handleChange(search, e.target.value)}
       >
@@ -58,7 +50,7 @@ export default function SearchBar({ onFilterChange }: Props) {
 
       {/* status filter drop down */}
       <select
-        className="border border-neutral-300 rounded-lg px-3 py-2 w-full md:w-1/3"
+        className="border  py-2 rounded mb-4 w-1/2"
         value={stockStatus}
         onChange={(e) =>
           handleChange(search, category, e.target.value as StockStatus)
@@ -70,5 +62,6 @@ export default function SearchBar({ onFilterChange }: Props) {
         <option value="out_of_stock">Out of Stock</option>
       </select>
     </div>
+  </>
   );
 }

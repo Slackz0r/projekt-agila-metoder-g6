@@ -11366,68 +11366,6 @@
       ],
       "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/thumbnail.webp",
       "categoryId": 23
-    },
-    {
-      "id": 190,
-      "title": "IWC Ingenieur Automatic Steel",
-      "description": "The IWC Ingenieur Automatic Steel watch is a durable and sophisticated timepiece. With a stainless steel case and automatic movement, it combines precision and style for watch enthusiasts.",
-      "price": 4999.99,
-      "discountPercentage": 9.45,
-      "rating": 2.93,
-      "stock": 90,
-      "tags": [
-        "watches",
-        "luxury watches"
-      ],
-      "brand": "IWC",
-      "sku": "WOM-IWC-ING-190",
-      "weight": 3,
-      "dimensions": {
-        "width": 24.77,
-        "height": 24.66,
-        "depth": 6.09
-      },
-      "warrantyInformation": "1 year warranty",
-      "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 3,
-          "comment": "Disappointing product!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Gabriel Adams",
-          "reviewerEmail": "gabriel.adams@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Great value for money!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Evan Reed",
-          "reviewerEmail": "evan.reed@x.dummyjson.com"
-        },
-        {
-          "rating": 3,
-          "comment": "Would not buy again!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Clara Berry",
-          "reviewerEmail": "clara.berry@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "No return policy",
-      "minimumOrderQuantity": 1,
-      "meta": {
-        "createdAt": "2025-04-30T09:41:02.054Z",
-        "updatedAt": "2025-04-30T09:41:02.054Z",
-        "barcode": "7438522857639",
-        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/1.webp",
-        "https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/2.webp",
-        "https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/3.webp"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/thumbnail.webp",
-      "categoryId": 24
     }
   ],
   "categories": [

@@ -26,11 +26,10 @@ type ActiveUser = {
   name: string;
   email: string;
 };
-
 const activeUser: ActiveUser = {
-  image: "https://www.loremfaces.net/96/id/2.jpg",
-  name: "Carl Bildt",
-  email: "c_bildt_3000@yahoo.com",
+  image: "https://www.indexoncensorship.org/wp-content/uploads/2025/12/putin-400.jpg",
+  name: "Vladimir Putin",
+  email: "vladimirputin@kreml.ru",
 };
 //************************************************* */
 

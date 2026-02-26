@@ -8,6 +8,7 @@ import ProductManagement from "@/components/ui/product-management";
 import ProductStats from "@/components/ui/product-stats";
 import SearchBar from "@/components/ui/search-bar";
 import Products from "@/components/GetProd";
+import Search from "@/components/search";
 
 const defaultLimit = "100";
 
@@ -21,8 +22,8 @@ export default async function Home() {
         <section>
           <ProductManagement />
           <ProductStats />
+	  <Search />
           <SearchBar />
-
           <Products products={data.products} />
         </section>
       </div>

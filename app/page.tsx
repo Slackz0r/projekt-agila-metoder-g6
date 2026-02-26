@@ -19,11 +19,13 @@ export default async function Home() {
     <main>
       <div className="flex">
         <AdminPanel />
-        <section>
+        <section className="w-full px-16">
           <ProductManagement />
           <ProductStats />
-	  <Search />
+
+          <Search />
           <SearchBar />
+
           <Products products={data.products} />
         </section>
       </div>

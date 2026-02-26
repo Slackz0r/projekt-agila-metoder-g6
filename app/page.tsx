@@ -19,7 +19,7 @@ export default async function Home() {
     <main>
       <div className="flex">
         <AdminPanel />
-        <section>
+        <section className="w-full px-16">
           <ProductManagement />
           <ProductStats />
 	  <Search />

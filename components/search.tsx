@@ -57,6 +57,8 @@ export default function Search() {
       keys: [
         "title",
         "description",
+	"price",
+	"category",
    //     "brand",
    //     "sku",
    //     "tags",

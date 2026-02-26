@@ -11303,69 +11303,6 @@
       ],
       "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/thumbnail.webp",
       "categoryId": 23
-    },
-    {
-      "id": 188,
-      "title": "Pampi Shoes",
-      "description": "Pampi Shoes offer a blend of comfort and style for everyday use. With a versatile design, they are suitable for various casual occasions, providing a trendy and relaxed look.",
-      "price": 29.99,
-      "discountPercentage": 14.14,
-      "rating": 3.05,
-      "stock": 49,
-      "tags": [
-        "footwear",
-        "casual shoes"
-      ],
-      "brand": "Pampi",
-      "sku": "WOM-PAM-PAM-188",
-      "weight": 7,
-      "dimensions": {
-        "width": 29.43,
-        "height": 22.65,
-        "depth": 16.12
-      },
-      "warrantyInformation": "No warranty",
-      "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 4,
-          "comment": "Highly recommended!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Nathan Reed",
-          "reviewerEmail": "nathan.reed@x.dummyjson.com"
-        },
-        {
-          "rating": 4,
-          "comment": "Would buy again!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Connor Baker",
-          "reviewerEmail": "connor.baker@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Awesome product!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Noah Lewis",
-          "reviewerEmail": "noah.lewis@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "60 days return policy",
-      "minimumOrderQuantity": 12,
-      "meta": {
-        "createdAt": "2025-04-30T09:41:02.054Z",
-        "updatedAt": "2025-04-30T09:41:02.054Z",
-        "barcode": "9686058230535",
-        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/1.webp",
-        "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/2.webp",
-        "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/3.webp",
-        "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/4.webp"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/thumbnail.webp",
-      "categoryId": 23
     }
   ],
   "categories": [

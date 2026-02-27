@@ -9675,7 +9675,7 @@
     },
     {
       "id": 161,
-      "title": "Samsung Galaxy Tab White",
+      "title": "Samsung Galaxy Tab White m",
       "description": "The Samsung Galaxy Tab in White is a sleek and versatile Android tablet. With a vibrant display, long-lasting battery, and a range of features, it offers a great user experience for various tasks.",
       "price": 349.99,
       "discountPercentage": 18.2,
@@ -9735,68 +9735,6 @@
       ],
       "thumbnail": "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/thumbnail.webp",
       "categoryId": 17
-    },
-    {
-      "id": 162,
-      "title": "black Frock",
-      "description": "The Blue Frock is a charming and stylish dress for various occasions. With a vibrant blue color and a comfortable design, it adds a touch of elegance to your wardrobe.",
-      "price": 29.99,
-      "discountPercentage": 12.13,
-      "rating": 4.17,
-      "stock": 52,
-      "tags": [
-        "clothing",
-        "dresses"
-      ],
-      "sku": "TOP-BRD-BLU-162",
-      "weight": 5,
-      "dimensions": {
-        "width": 24.25,
-        "height": 5.91,
-        "depth": 8.79
-      },
-      "warrantyInformation": "Lifetime warranty",
-      "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 4,
-          "comment": "Great product!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Victoria McDonald",
-          "reviewerEmail": "victoria.mcdonald@x.dummyjson.com"
-        },
-        {
-          "rating": 4,
-          "comment": "Fast shipping!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Benjamin Foster",
-          "reviewerEmail": "benjamin.foster@x.dummyjson.com"
-        },
-        {
-          "rating": 4,
-          "comment": "Would buy again!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Addison Ward",
-          "reviewerEmail": "addison.ward@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "60 days return policy",
-      "minimumOrderQuantity": 4,
-      "meta": {
-        "createdAt": "2025-04-30T09:41:02.054Z",
-        "updatedAt": "2025-04-30T09:41:02.054Z",
-        "barcode": "6410441827139",
-        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/product-images/tops/blue-frock/1.webp",
-        "https://cdn.dummyjson.com/product-images/tops/blue-frock/2.webp",
-        "https://cdn.dummyjson.com/product-images/tops/blue-frock/3.webp",
-        "https://cdn.dummyjson.com/product-images/tops/blue-frock/4.webp"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/product-images/tops/blue-frock/thumbnail.webp",
-      "categoryId": 18
     },
     {
       "id": 163,
@@ -10684,68 +10622,6 @@
       "categoryId": 20
     },
     {
-      "id": 177,
-      "title": "Black Women's Gown",
-      "description": "The Black Women's Gown is an elegant and timeless evening gown. With a sleek black design, it's perfect for formal events and special occasions, exuding sophistication and style.",
-      "price": 129.99,
-      "discountPercentage": 10.48,
-      "rating": 3.64,
-      "stock": 25,
-      "tags": [
-        "clothing",
-        "gowns"
-      ],
-      "sku": "WOM-BRD-BLA-177",
-      "weight": 2,
-      "dimensions": {
-        "width": 7.86,
-        "height": 9.02,
-        "depth": 25.82
-      },
-      "warrantyInformation": "Lifetime warranty",
-      "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 4,
-          "comment": "Great value for money!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Ethan Fletcher",
-          "reviewerEmail": "ethan.fletcher@x.dummyjson.com"
-        },
-        {
-          "rating": 3,
-          "comment": "Very dissatisfied!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Julian Newton",
-          "reviewerEmail": "julian.newton@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Very satisfied!",
-          "date": "2025-04-30T09:41:02.054Z",
-          "reviewerName": "Savannah Gomez",
-          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "No return policy",
-      "minimumOrderQuantity": 5,
-      "meta": {
-        "createdAt": "2025-04-30T09:41:02.054Z",
-        "updatedAt": "2025-04-30T09:41:02.054Z",
-        "barcode": "0630346013554",
-        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/1.webp",
-        "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/2.webp",
-        "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/3.webp",
-        "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/4.webp"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/thumbnail.webp",
-      "categoryId": 21
-    },
-    {
       "id": 178,
       "title": "Corset Leather With Skirt",
       "description": "The Corset Leather With Skirt is a bold and edgy ensemble that combines a stylish corset with a matching skirt. Ideal for fashion-forward individuals, it makes a statement at any event.",
@@ -11366,6 +11242,66 @@
       ],
       "thumbnail": "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/thumbnail.webp",
       "categoryId": 23
+    },
+    {
+      "title": "t34",
+      "brand": "russia",
+      "description": "russian ww2 tank",
+      "thumbnail": "http://sdfds.com",
+      "price": 990000,
+      "categoryId": 19,
+      "stock": 1000,
+      "meta": {
+        "createdAt": "2026-02-26T21:15:12.656Z",
+        "updatedAt": "2026-02-26T21:15:12.656Z"
+      },
+      "id": 189,
+      "sku": "VEH-RUS-T34-189"
+    },
+    {
+      "title": "t72",
+      "brand": "russia",
+      "description": "russian tank",
+      "thumbnail": "http://dfaf.com",
+      "price": 456000,
+      "categoryId": 19,
+      "stock": 1000,
+      "meta": {
+        "createdAt": "2026-02-26T21:44:21.828Z",
+        "updatedAt": "2026-02-26T21:44:21.828Z"
+      },
+      "id": 190,
+      "sku": "VEH-RUS-T72-190"
+    },
+    {
+      "title": "t60",
+      "brand": "russia",
+      "description": "russian tank",
+      "thumbnail": "http://dfsdf.com",
+      "price": 4000,
+      "categoryId": 19,
+      "stock": 1000,
+      "meta": {
+        "createdAt": "2026-02-27T08:12:55.616Z",
+        "updatedAt": "2026-02-27T08:12:55.616Z"
+      },
+      "id": 191,
+      "sku": "VEH-RUS-T60-191"
+    },
+    {
+      "title": "t90",
+      "brand": "russia",
+      "description": "russian tank",
+      "thumbnail": "http://lkdsflfdj.com",
+      "price": 1000,
+      "categoryId": 1,
+      "stock": 300,
+      "meta": {
+        "createdAt": "2026-02-27T09:51:46.654Z",
+        "updatedAt": "2026-02-27T09:51:46.654Z"
+      },
+      "id": 192,
+      "sku": "BEA-RUS-T90-192"
     }
   ],
   "categories": [

@@ -6,10 +6,8 @@ import type { Product } from "../types/types";
 
 const API_URL = "http://localhost:4000/products";
 
-function highlightText(
-  text: string,
-  matches?: readonly [number, number][]
-) {
+function highlightText(text: string,matches?: readonly [number, number][]) {
+
   if (!matches || matches.length === 0) return text;
 
   const result: (string | JSX.Element)[] = [];
@@ -57,6 +55,7 @@ export default function Search() {
       keys: [
         "title",
         "description",
+	"price",
         //     "brand",
         //     "sku",
         //     "tags",
@@ -78,6 +77,8 @@ export default function Search() {
       return;
     }
     const searchResults = fuse.search(`'${query}`);
+    //const searchResults = fuse.search(query);
+
     setResults(searchResults);
   }, [query, fuse]);
 

@@ -17,6 +17,9 @@ export default async function Home() {
 
   return (
     <main>
+    <div className="w-full mx-auto text-center">
+      <h1 className="text-blue-700 text-8xl"> Glenn express</h1>
+    </div>
       <div className="flex">
         <AdminPanel />
         <section className="w-full px-16">

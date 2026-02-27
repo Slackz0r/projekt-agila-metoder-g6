@@ -11,14 +11,18 @@ type Props = {
 };
 
 export default function Products({ products }: Props) {
+  	// current value productList etc
+	// {initial value}
+	// setProduct function to update it
+	// selectId keeps id and it is updated with setSelectedId
+	// deleteId keeps id of products to be deleted
+	// products selected and deleteId keeps reccord of products
   const [productList, setProductList] = useState<Product[]>(products);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [deleteId, setDeleteId] = useState<number | null>(null);
 
   function handleUpdate(updatedProduct: Product) {
-    setProductList(prev =>
-      prev.map(p => (p.id === updatedProduct.id ? updatedProduct : p))
-    );
+    setProductList(prev => prev.map(p => (p.id === updatedProduct.id ? updatedProduct : p)));
     setSelectedId(null);
   }
 
